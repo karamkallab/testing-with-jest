@@ -43,5 +43,5 @@ test('pushing to stack updates the display', async () => {
     await alert.accept();
 
     let display = await driver.findElement(By.id('top_of_stack')).getText();
-    expect(display).toEqual("fel värde");
+    expect(display).toEqual("Mango");
 });
