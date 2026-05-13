@@ -6,7 +6,7 @@ require("geckodriver");
 const fileUnderTest = 'file://' + __dirname.replaceAll(/ /g, '%20').replaceAll(/\\/g, '/') + '/../dist/index.html';
 const defaultTimeout = 10000;
 let driver;
-jest.setTimeout(1000 * 60 * 5); // 5 minuter
+jest.setTimeout(1000 * 60 * 1); // 1 minut
 
 // Det här körs innan vi kör testerna för att säkerställa att Firefox är igång
 beforeAll(async () => {

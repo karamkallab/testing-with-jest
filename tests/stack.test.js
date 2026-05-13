@@ -17,3 +17,7 @@ test('peek on stack with two or more elements returns the top element', () => {
     expect(stack.peek()).toBeDefined();
     expect(stack.peek()).toBe(42);
 });
+
+test('pop returns undefined on empty stack', () => {
+    expect(stack.pop()).toBe("fel värde");
+});
