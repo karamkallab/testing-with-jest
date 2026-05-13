@@ -34,3 +34,14 @@ describe('Clicking "Pusha till stacken"', () => {
         await alert.accept();
     });
 }); 
+
+test('pushing to stack updates the display', async () => {
+    let push = await driver.findElement(By.id('push'));
+    await push.click();
+    let alert = await driver.switchTo().alert();
+    await alert.sendKeys("Mango");
+    await alert.accept();
+
+    let display = await driver.findElement(By.id('top_of_stack')).getText();
+    expect(display).toEqual("fel värde");
+});
