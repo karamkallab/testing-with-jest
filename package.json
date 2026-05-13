@@ -1,0 +1,23 @@
+{
+  "name": "testing-with-jest",
+  "version": "1.0.0",
+  "description": "A Jest + npm lab session",
+  "homepage": "https://github.com/karamkallab/testing-with-jest#readme",
+  "bugs": {
+    "url": "https://github.com/karamkallab/testing-with-jest/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karamkallab/testing-with-jest.git"
+  },
+  "license": "MIT",
+  "author": "Karam Kallab",
+  "type": "git",
+  "main": "src/index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
