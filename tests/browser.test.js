@@ -1,5 +1,5 @@
 const { Builder, By, until } = require('selenium-webdriver');
-require('geckodriver');
+require("geckodriver");
 
 // Här anger vi var testfilen ska hämtas. De konstiga replaceAll-funktionerna ersätter
 // mellanslag med URL-säkra '%20' och backslash (\) på Windows med slash (/).
@@ -16,10 +16,8 @@ console.log(fileUnderTest);
 });
 
 // Allra sist avslutar vi Firefox igen
-afterAll(async () => {
-    if (driver) {
-        await driver.quit();
-    }
+afterAll(async() => {
+    await driver.quit();
 }, defaultTimeout);
 
 test('The stack should be empty in the beginning', async () => {
@@ -35,4 +33,4 @@ describe('Clicking "Pusha till stacken"', () => {
         await alert.sendKeys("Bananer");
         await alert.accept();
     });
-});
+}); 
