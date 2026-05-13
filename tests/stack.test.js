@@ -19,5 +19,6 @@ test('peek on stack with two or more elements returns the top element', () => {
 });
 
 test('pop returns undefined on empty stack', () => {
-    expect(stack.pop()).toBe("fel värde");
+    while (stack.pop() !== undefined) {}
+    expect(stack.pop()).toBeUndefined();
 });
