@@ -16,8 +16,10 @@ console.log(fileUnderTest);
 });
 
 // Allra sist avslutar vi Firefox igen
-afterAll(async() => {
-    await driver.quit();
+afterAll(async () => {
+    if (driver) {
+        await driver.quit();
+    }
 }, defaultTimeout);
 
 test('The stack should be empty in the beginning', async () => {
